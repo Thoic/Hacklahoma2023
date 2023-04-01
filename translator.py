@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
-from gtts import gTTS
 import os
+from gtts import gTTS
 
 def get_grayscale(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
