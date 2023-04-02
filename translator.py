@@ -18,6 +18,8 @@ else:
 image = cv2.imread('scannedImage.jpg')
 translation = pytesseract.image_to_string(image)
 print(translation)
+if(translation == ""):
+	translation = "No text detected"
 gttsObj = gTTS(text=translation, lang='en', slow=False)
 gttsObj.save("translation.mp3")
   
